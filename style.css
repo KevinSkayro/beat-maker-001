@@ -87,6 +87,14 @@ svg {
   cursor: pointer;
   margin-top: 3rem;
 }
+select {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.mute.active {
+  background-color: rgb(197, 11, 11);
+}
 
 @keyframes playTrack {
   from {
