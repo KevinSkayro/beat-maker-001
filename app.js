@@ -62,7 +62,7 @@ class DrumKit {
       this.playBtn.classList.add("active");
     } else {
       this.playBtn.innerText = "Play";
-      this.playBtn.style.backgroundColor = "rgb(88, 88, 88)";
+      this.playBtn.style.backgroundColor = "rgb(53, 48, 80)";
       this.playBtn.classList.remove("active");
     }
   }

@@ -5,7 +5,11 @@
 }
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: antiquewhite;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url("background.jpg");
+}
+h1 {
+  color: #ffffff;
 }
 i,
 svg {
@@ -25,25 +29,26 @@ svg {
   height: 5rem;
   margin: 1rem 0.5rem;
   cursor: pointer;
+  border-radius: 0.5em;
 }
 .kick-pad {
-  background-color: rgb(165, 199, 156);
+  background-color: rgb(181, 91, 146);
 }
 .snare-pad {
-  background-color: rgb(132, 197, 192);
+  background-color: rgb(28, 181, 214);
 }
 .hihat-pad {
-  background-color: rgb(138, 173, 218);
+  background-color: rgb(217, 141, 204);
 }
 
 .kick-pad.active {
-  background-color: rgb(74, 194, 44);
+  background-color: rgb(182, 17, 118);
 }
 .snare-pad.active {
-  background-color: rgb(21, 172, 159);
+  background-color: rgb(23, 20, 212);
 }
 .hihat-pad.active {
-  background-color: rgb(60, 127, 216);
+  background-color: rgb(211, 44, 141);
 }
 
 .hihat-track,
@@ -68,9 +73,10 @@ svg {
   margin: 0rem 2rem;
 }
 .controls button {
-  padding: 1rem;
+  padding: 1em;
   border: none;
-  background-color: rgb(83, 144, 223);
+  border-radius: 0.5em;
+  background-color: rgb(197, 158, 193);
   color: #ffffff;
   font-size: 1rem;
   cursor: pointer;
@@ -82,19 +88,58 @@ svg {
 .play {
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  background-color: rgb(88, 88, 88);
+  background-color: rgb(53, 48, 80);
   color: #ffffff;
   border: none;
+  border-radius: 0.5em;
   cursor: pointer;
   margin-top: 3rem;
 }
-select {
-  padding: 1rem;
-  font-size: 1rem;
+
+.select-css {
+  display: block;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.3;
+  padding: 1em 1.4em 1em 0.8em;
+  width: 50%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #c7acc4;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #c7acc4;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"),
+    linear-gradient(to bottom, #c7acc4 0%, #e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+}
+.select-css::-ms-expand {
+  display: none;
+}
+.select-css:hover {
+  border-color: #888;
+}
+.select-css:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+.select-css option {
+  font-weight: normal;
 }
 
 .mute.active {
-  background-color: rgb(197, 11, 11);
+  background-color: rgb(145, 13, 13);
 }
 
 .tempo {
@@ -108,12 +153,13 @@ select {
   width: 100%;
   border-radius: 1rem;
   position: relative;
-  background-color: rgb(21, 172, 159);
+  background-color: rgb(28, 181, 214);
 }
 .tempo p {
   font-size: 1.5rem;
   margin: 2rem;
   text-align: center;
+  color: #ffffff;
 }
 
 @keyframes playTrack {
@@ -121,6 +167,6 @@ select {
     transform: scale(1);
   }
   to {
-    transform: scale(1.1);
+    transform: scale(1.12);
   }
 }
