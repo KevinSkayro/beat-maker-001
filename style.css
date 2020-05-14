@@ -6,7 +6,7 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-    url("background.jpg");
+    url("background.jpg"); /*I do not own any rights over this beautiful background*/
 }
 h1 {
   color: #ffffff;
