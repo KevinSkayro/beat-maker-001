@@ -2,16 +2,16 @@ class DrumKit {
   constructor() {
     this.pads = document.querySelectorAll(".pad");
     this.playBtn = document.querySelector(".play");
-    this.currentKick = "/sounds/kick-classic.wav";
-    this.currentSnare = "/sounds/snare-big.wav";
-    this.currentHihat = "/sounds/hihat-electro.wav";
+    this.currentKick = "./sounds/kick-classic.wav";
+    this.currentSnare = "./sounds/snare-big.wav";
+    this.currentHihat = "./sounds/hihat-electro.wav";
     this.kickAudio = document.querySelector(".kick-sound");
     this.snareAudio = document.querySelector(".snare-sound");
     this.hihatAudio = document.querySelector(".hihat-sound");
     this.index = 0;
     this.bpm = 180;
     this.isPlaying = null;
-    this.selects = document.querySelectorAll(".select");
+    this.selects = document.querySelectorAll("select");
     this.muteBtns = document.querySelectorAll(".mute");
     this.tempoSlider = document.querySelector(".tempo-slider");
   }
@@ -58,7 +58,7 @@ class DrumKit {
   updateBtn() {
     if (!this.isPlaying) {
       this.playBtn.innerText = "Stop";
-      this.playBtn.style.backgroundColor = "red";
+      this.playBtn.style.backgroundColor = "rgb(145, 13, 13)";
       this.playBtn.classList.add("active");
     } else {
       this.playBtn.innerText = "Play";
